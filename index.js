@@ -51,6 +51,10 @@ async function main() {
         exitProgram();
       }
     }
+    if(turn === 9){
+      console.log("\nGame Drawn GG!")
+      exitProgram();
+    }
     turn++;
   }
 }
@@ -101,7 +105,6 @@ function checkWinner(board) {
     if (leftToRightDiaganolmatches === 3) return leftToRightDiaganolFirst;
   }
 
-  console.log(inversedBoard);
   return checkWinner(inversedBoard);
 }
 
